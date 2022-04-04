@@ -28,7 +28,7 @@ def validasi_panjang(prompt: str) -> bool:
 def generate_keywords(prompt: str) -> List[str]:
     #Load your API key from an environment variable or secret management service
     openai.api_key = os.getenv("OPENAI_API_KEY")
-    prompt_apik = f"Generate related branding keywords for {prompt}:"
+    prompt_apik = f"Generate nice happy branding snippet for {prompt}:"
     print(prompt_apik)
     response = openai.Completion.create(engine="text-davinci-002", prompt=prompt_apik, max_tokens=32)
     
@@ -49,7 +49,7 @@ def generate_keywords(prompt: str) -> List[str]:
 def generate_branding_snippet(prompt: str)->str:
     #Load your API key from an environment variable or secret management service
     openai.api_key = os.getenv("OPENAI_API_KEY")
-    prompt_apik = f"Generate upbeat branding snippet for {prompt}:"
+    prompt_apik = f"Generate nice happy branding snippet for {prompt}:"
     print(prompt_apik)
     response = openai.Completion.create(engine="text-davinci-002", prompt=prompt_apik, max_tokens=32)
     
