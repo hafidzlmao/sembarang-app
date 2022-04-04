@@ -12,7 +12,7 @@ def main():
     args = parser.parse_args()
     user_input = args.input
 
-    print(f"User Input: {user_input}")
+    print(f"User input: {user_input}")
     if validasi_panjang(user_input):
         generate_branding_snippet(user_input)
         generate_keywords(user_input)
