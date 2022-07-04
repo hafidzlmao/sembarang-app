@@ -18,7 +18,7 @@ def main():
         generate_keywords(user_input)
     else:
         raise ValueError(
-            f"Input length is too long. Must be under {MAX_INPUT_LENGTH}. Submitted input is {user_input}"
+            f"Input is too long. Enter max {MAX_INPUT_LENGTH} character"
         )
 
 def validasi_panjang(prompt: str) -> bool:
@@ -28,7 +28,7 @@ def validasi_panjang(prompt: str) -> bool:
 def generate_keywords(prompt: str) -> List[str]:
     #Load your API key from an environment variable or secret management service
     openai.api_key = os.getenv("OPENAI_API_KEY")
-    prompt_apik = f"Generate nice happy branding snippet for {prompt}:"
+    prompt_apik = f"Generate relatable keywords for {prompt}:"
     print(prompt_apik)
     response = openai.Completion.create(engine="text-davinci-002", prompt=prompt_apik, max_tokens=32)
     
@@ -46,7 +46,7 @@ def generate_keywords(prompt: str) -> List[str]:
     return keyword_array
 
 
-def generate_branding_snippet(prompt: str)->str:
+def generate_branding_copywrite(prompt: str)->str:
     #Load your API key from an environment variable or secret management service
     openai.api_key = os.getenv("OPENAI_API_KEY")
     prompt_apik = f"Generate nice happy branding snippet for {prompt}:"
